@@ -1,0 +1,140 @@
+<html>
+
+
+<head> 
+<title> Login Page</title>
+
+<style>
+
+div.a {
+  text-align: center;
+}
+
+div.b {
+  left: 10%;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.center {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+  left: 25%;
+}
+
+.button-container-div {
+            width: 700px;
+            height: 100px;
+            padding-left: 260px;
+            padding-top: 25px;
+            margin: auto;
+        }
+.lt { 
+    text-align: center; 
+    }
+
+.right {
+  position: absolute;
+  right: 1100px;
+  width: 350px;
+  padding: 1px;
+}
+
+#content #text {
+    position:relative;
+    width:950px;
+    height:215px;
+    color:red;
+}
+
+
+</style>
+
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="a">
+<h1> Multilingual sentiment analysis using Deep-learning techniques </h1>
+    <h3>Submitted by:</h3>
+    <h4>Anish, Niranjan, Praveen Dominic</h4>
+</div>
+
+<form method='GET' action="{{url_for('redirect_tmp')}}">
+    <div class='button-container-div '>
+<select onchange="this.form.submit();">
+<option class="lt"> BATCH ANALYTICS </option>
+<option class="lt"> REALTIME ANALYTICS </option>
+</select></br>
+    </div>
+
+
+<!--
+tableauPlaceholder
+<input type='submit' value='submit'>
+-->
+
+
+
+</form>
+<p>Machine learning techniques such as NLP (Natural
+language processing) play a key role in a context where mining
+social media data could add great value to governments of the
+world countries. The posts and tweets shared by the people on
+social media can be mined to infer the valuable ‘mindset’ of the
+people which is much required for any ruling government in the
+world. The objective of this study is to conduct sentiment analysis
+to mine the sentiment of the people regarding the ongoing war
+between Russia and Ukraine, using machine learning techniques.
+The idea is to analyze and infer if the countries have reacted
+in some way, considering the sentiment of their citizens, in
+the context of oil imports from Russia. The pipeline of the
+implementation associated starts with the data collection from
+social media such as Twitter and Reddit using Snscraper and
+the PRAW (Python Reddit API Wrapper). The larger posts from
+Reddit are handled by implementing suitable text summarization
+techniques. Sentiment analysis is performed for the social media
+data using the BERT transformer model. The non-English posts
+are translated to English using neural machine translation.
+Also, sentiment analysis is done in the analysis is deep-dived
+at various granularities such as the location and the people that
+are tagged using Named Entity Recognition techniques. Finally, a
+comparative analysis of the world countries’ sentiment and their
+corresponding reliance on Russian oil is performed.</p>>
+
+<div class='right'>
+    <!--
+<div class='tableauPlaceholder' id='viz1638233313878' style='position: relative'><noscript><a href='#'><img alt='Story 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gr&#47;Group11Finworkbook&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='views&#47;Group11Finworkbook&#47;Story1?:language=en-US&amp;:embed=true&amp;publish=yes' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Gr&#47;Group11Finworkbook&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' />
+<param name='filter' value='publish=yes' /></object>
+
+<script type='text/javascript'>
+var divElement = document.getElementById('viz1638233313878');
+var vizElement = divElement.getElementsByTagName('object')[0];
+vizElement.style.width='1016px';vizElement.style.height='991px';
+var scriptElement = document.createElement('script');
+scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+vizElement.parentNode.insertBefore(scriptElement, vizElement);
+</script>
+</div>
+-->
+
+<div class='tableauPlaceholder' id='viz1658898554641' style='position: relative'><noscript><a href='#'><img alt='INFERENCE ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AM&#47;AMOD_Batch_sentimentanalysis&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='AMOD_Batch_sentimentanalysis&#47;Story1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;AM&#47;AMOD_Batch_sentimentanalysis&#47;Story1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+    <script type='text/javascript'>                    var divElement = document.getElementById('viz1658898554641');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</div>
+
+
+
+</body>
+
+</html>

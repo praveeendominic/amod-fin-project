@@ -1,0 +1,129 @@
+<html>
+
+
+<head> 
+<title> Login Page</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<style>
+
+div.a {
+  text-align: center;
+}
+
+div.b {
+  left: 10%;
+}
+
+.center_text {
+  text-align: center;
+}
+
+.center {
+  position: relative;
+  margin: auto;
+  width: 60%;
+  padding: 20px;
+  left: 25%;
+}
+
+.button-container-div {
+            width: 700px;
+            height: 100px;
+            padding-left: 260px;
+            padding-top: 25px;
+            margin: auto;
+        }
+.lt {
+    text-align: center;
+    }
+
+.right {
+  position: absolute;
+  right: 1100px;
+  width: 350px;
+  padding: 1px;
+}
+
+#content #text {
+    position:relative;
+    width:950px;
+    height:215px;
+    color:red;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<div class="a">
+<h1> Multilingual sentiment analysis using Deep-learning techniques </h1>
+    <h3>Submitted by:</h3>
+    <h4>Anish, Niranjan, Praveen Dominic</h4>
+</div>
+
+
+<form method="get" action="{{url_for('redirect_login')}}" >
+<div class='button-container-div '>
+<select onchange="this.form.submit();">
+<option> REALTIME ANALYTICS </option>
+<option> BATCH  ANALYTICS </option>
+</select></br>
+</div>
+</form>
+
+<h1>Time taken for execution: {{exec_time}}</h1>
+
+<div class="View Raw Realtime Tweet">
+  <h2>RAW REALTIME TWEET</h2>
+{% for table in tables %}
+  <h3>{{titles[loop.index]}}</h3>
+  {{ table|safe }}
+{% endfor %}
+</div>
+
+<div class="View Cleaned Realtime Tweet">
+  <h2>CLEANED REALTIME TWEET</h2>
+{% for table1 in tables1 %}
+  <h3>{{titles1[loop.index]}}</h3>
+  {{ table1|safe }}
+{% endfor %}
+</div>
+
+
+<div class="View LANGUAGE DISTRIBUTION">
+  <h2>View LANGUAGE DISTRIBUTION</h2>
+{% for table2 in tables2 %}
+  <h3>{{titles2[loop.index]}}</h3>
+  {{ table2|safe }}
+{% endfor %}
+</div>
+
+<div class="View TRANSLATED TWEETS">
+  <h2>TRANSLATED REALTIME TWEETS</h2>
+{% for table3 in tables3 %}
+  <h3>{{titles3[loop.index]}}</h3>
+  {{ table3|safe }}
+{% endfor %}
+</div>
+
+<div class="Predicted Sentiments">
+  <h2>SENTIMENTS PREDICTED</h2>
+{% for table4 in tables4 %}
+  <h3>{{titles4[loop.index]}}</h3>
+  {{ table4|safe }}
+{% endfor %}
+</div>
+
+
+</body>
+
+</html>
